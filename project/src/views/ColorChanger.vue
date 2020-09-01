@@ -4,10 +4,39 @@
     <h1>BACKGROUND COLOR CHANGER</h1>
     <br /><br />
     <div>
-      <input class="l" type="checkbox" />
+      <input
+        class="l"
+        type="checkbox"
+        @click="changeBckgroundColor"
+        v-model="checked"
+      />
     </div>
+
+    {{ text }}
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      checked: "",
+      text: "",
+    };
+  },
+  methods: {
+    changeBckgroundColor() {
+      if (this.checked == false) {
+        this.text = "checked";
+        document.body.style.backgroundColor = "white";
+      } else if (this.checked == true) {
+        this.text = "not checked";
+        document.body.style.backgroundColor = "grey";
+      }
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 *,
