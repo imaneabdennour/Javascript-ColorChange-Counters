@@ -1,9 +1,25 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light"
+      style="background-color: #e3f2fd;"
+    >
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              <router-link to="/colorChanger">Color Changer</router-link>
+              <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <router-link to="/letterCounter">Letter Counter</router-link>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <router-view />
   </div>
 </template>
