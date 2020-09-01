@@ -17,6 +17,11 @@
               <router-link to="/letterCounter">Letter Counter</router-link>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <router-link to="/numberCounter">Number Counter</router-link>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

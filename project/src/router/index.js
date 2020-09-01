@@ -14,6 +14,11 @@ const routes = [
     name: "LetterCounter",
     component: () => import("../views/LetterCounter.vue"),
   },
+  {
+    path: "/numberCounter",
+    name: "NumberCounter",
+    component: () => import("../views/NumberCounter.vue"),
+  },
 ];
 
 const router = new VueRouter({

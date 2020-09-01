@@ -1,6 +1,6 @@
 # backgroundColorChanger
 
-with Vuejs
+with Vuejs - Bootstrap
 
 1. Changing the background color of page
 2. Letter counter
