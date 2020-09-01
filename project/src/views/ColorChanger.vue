@@ -7,7 +7,7 @@
       <input
         class="l"
         type="checkbox"
-        @click="changeBckgroundColor"
+        @change="changeBckgroundColor"
         v-model="checked"
       />
     </div>
@@ -24,12 +24,18 @@ export default {
       text: "",
     };
   },
+  created() {
+    if (this.checked == false) {
+      this.text = "not checked";
+      document.body.style.backgroundColor = "grey";
+    }
+  },
   methods: {
     changeBckgroundColor() {
-      if (this.checked == false) {
+      if (this.checked == true) {
         this.text = "checked";
         document.body.style.backgroundColor = "white";
-      } else if (this.checked == true) {
+      } else {
         this.text = "not checked";
         document.body.style.backgroundColor = "grey";
       }
